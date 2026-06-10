@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylizacja paznokci</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section id="mainContainer">
+        <aside>
+            <img src="manicure.jpg" alt="Stylizacja paznokci">
+        </aside>
+        <section id="rightContainer">
+            <main>
+                <header>
+                    <h1>Twoje wymarzone paznokcie</h1>
+                </header>
+                <nav>
+                    <button id="guzikKolor" onmouseover="kolor()">Kolor</button>
+                    <button id="guzikKsztalt" onmouseover="ksztalt()">Kształt</button>
+                    <button id="guzikWzor" onmouseover="wzor()">Wzór</button>
+                </nav>
+                <section id="sekcja1">
+                    <h2>Kolor</h2>
+                    <img src="kolory.png" alt="kolory paznokci"><br>
+                    <input type="color" value="#FF0000" id="kolor">
+                </section>
+                <section id="sekcja2">
+                    <h2>Kształt</h2>
+                    <img src="ksztalt.png" alt="Kształty paznokci"><br>
+                    <select>
+                        <option value="migdal">migdał</option>
+                        <option value="zaokraglony">zaokrąglony</option>
+                        <option value="kwadratowy">kwadratowy</option>
+                        <option value="balerina">balerina</option>
+                        <option value="zaokraglonykwadrat">zaokrąglony kwadrat</option>
+                    </select>
+                </section>
+                <section id="sekcja3">
+                    <h2>Wzór</h2>
+                    <div id="miejsceNaSkrypt1">
+
+                    </div>
+                    <input type="number" min="1" max="10" step="1">
+                </section>
+            </main>
+        </section>
+    </section>
+    <footer>
+        <p>Autor strony: <em>Jose Arcadio Morales</em></p>
+    </footer>
+    
+    <script>
+        let guzik1 = document.getElementById('guzikKolor');
+        let guzik2 = document.getElementById('guzikKsztalt');
+        let guzik3 = document.getElementById('guzikWzor');
+        let sekcja1 = document.getElementById('sekcja1');
+        let sekcja2 = document.getElementById('sekcja2');
+        let sekcja3 = document.getElementById('sekcja3');
+        let divWyniku = document.getElementById('miejsceNaSkrypt1');
+
+        // skrypt 1
+        for(let i = 1; i <= 10; i++){
+            divWyniku.innerHTML += `<img src="${i}.jpg" class="wzory">`;
+        };
+
+
+        // skrypt 2
+        function kolor(){
+            sekcja1.style.display = 'block';
+            sekcja2.style.display = 'none';
+            sekcja3.style.display = 'none';
+            
+            guzik1.style.backgroundColor = 'salmon';
+            guzik2.style.backgroundColor = 'crimson';
+            guzik3.style.backgroundColor = 'crimson';
+        };
+
+        function ksztalt(){
+            sekcja1.style.display = 'none';
+            sekcja2.style.display = 'block';
+            sekcja3.style.display = 'none';
+
+            guzik1.style.backgroundColor = 'crimson';
+            guzik2.style.backgroundColor = 'salmon';
+            guzik3.style.backgroundColor = 'crimson';
+        };
+
+        function wzor(){
+            sekcja1.style.display = 'none';
+            sekcja2.style.display = 'none';
+            sekcja3.style.display = 'block';
+
+            guzik1.style.backgroundColor = 'crimson';
+            guzik2.style.backgroundColor = 'crimson';
+            guzik3.style.backgroundColor = 'salmon';
+        };
+
+    </script>
+</body>
+</html>

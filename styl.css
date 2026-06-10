@@ -1,0 +1,60 @@
+*{
+    font-family: Trebuchet MS;
+}
+#mainContainer{
+    display: flex;
+    flex-direction: row;
+}
+#rightContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: BlanchedAlmond;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+aside{
+    width: 20%;
+}
+aside img{
+    width: 100%;
+}
+#rightContainer{
+    width: 80%;
+}
+nav{
+    text-align: left;
+    margin-left: 10%;
+}
+#sekcja1,#sekcja2,#sekcja3{
+    background-color: salmon;
+    margin-left: 10%;
+    padding: 10px;
+    height: 250px;
+}
+#sekcja1{
+    display: block;
+}
+#sekcja2,#sekcja3{
+    display: none;
+}
+button{
+    width: 26%;
+    color: white;
+    border: none;
+    font-size: 200%;
+}
+#guzikKolor{
+    background-color: salmon;
+}
+#guzikKsztalt,#guzikWzor{
+    background-color: crimson;
+}
+.wzory{
+    width: 70px;
+    margin: 5px;
+    border-radius: 100%;
+}
